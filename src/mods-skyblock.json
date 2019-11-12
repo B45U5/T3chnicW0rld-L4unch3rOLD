@@ -1,0 +1,15 @@
+{
+"version": "9.2.0", 
+"mods": [
+{
+"name": "AdvancedMachinesAS-1.7.10.jar", 
+"forceupdate": "false", 
+"addon": "true", 
+"md5": "43E9D2F702235B1025D52C237B8F6EDD"
+},{
+"name": "AdvancedSolarPanel-1.7.10-3.5.1.jar", 
+"forceupdate": "false", 
+"addon": "false", 
+"md5": "E37CB1F923C5ABB6E2C9B3E96A0EFCAC"
+}]
+}

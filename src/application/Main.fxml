@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="800.0" style="-fx-background-color: transparent;;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main">
+   <children>
+      <AnchorPane fx:id="appPane" prefHeight="470.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to left top, #000000, #420f1d, #820327, #c20023, #ff0000);; -fx-background-size: 100%; -fx-background-position: center;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="mainPane" prefHeight="376.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to right top, #0f0f0f, #131313, #171717, #1a1a1a, #1e1d1d);;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="74.0">
+               <children>
+                  <VBox alignment="CENTER" layoutX="350.0" layoutY="137.0" prefHeight="103.0" prefWidth="100.0" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="137.0">
+                     <children>
+                        <JFXSpinner fx:id="web" prefHeight="87.0" prefWidth="87.0" VBox.vgrow="NEVER" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <Button fx:id="addons" alignment="CENTER" contentDisplay="CENTER" layoutX="488.0" layoutY="14.0" mnemonicParsing="false" onAction="#addons" prefHeight="45.0" prefWidth="78.0" style="-fx-background-color: rgba(17, 17, 17, 0); -fx-background-radius: 0px;" text="Dodatki" textAlignment="CENTER" textFill="WHITE" AnchorPane.rightAnchor="234.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="news" alignment="CENTER" contentDisplay="CENTER" layoutX="384.0" layoutY="14.0" mnemonicParsing="false" onAction="#news" prefHeight="45.0" prefWidth="104.0" style="-fx-background-color: rgba(17, 17, 17, 0); -fx-background-radius: 0px;" text="Wiadomości" textAlignment="CENTER" textFill="WHITE" AnchorPane.rightAnchor="312.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="play" alignment="CENTER" contentDisplay="CENTER" layoutX="641.0" layoutY="14.0" mnemonicParsing="false" onAction="#play" onMouseEntered="#playAnim" onMouseExited="#playExit" prefHeight="45.0" prefWidth="97.0" style="-fx-background-color: white; -fx-font-family: 'Dosis Light'; -fx-background-radius: 30 0 0 30;" styleClass="btn-round" stylesheets="@buttons.css" textAlignment="RIGHT" AnchorPane.rightAnchor="62.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font name="Calibri Light" size="20.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#757ceb" />
+                        <Stop color="#757ceb" offset="0.007662835249042145" />
+                        <Stop color="#00cff7" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <graphic>
+                  <Label fx:id="playText" text="Graj">
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#757ceb" />
+                              <Stop color="#757ceb" offset="0.007662835249042145" />
+                              <Stop color="#00cff7" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+               </graphic>
+            </Button>
+            <Button fx:id="modpacks" alignment="CENTER" contentDisplay="CENTER" layoutX="566.0" layoutY="14.0" mnemonicParsing="false" onAction="#modpacks" prefHeight="45.0" prefWidth="61.0" style="-fx-background-color: rgba(17, 17, 17, 0); -fx-background-radius: 0px;" text="Paczki" textAlignment="CENTER" textFill="WHITE" AnchorPane.rightAnchor="173.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Pane fx:id="userico" layoutX="10.0" layoutY="10.0" prefHeight="53.0" prefWidth="52.0" style="-fx-background-image: url(&quot;https://crafatar.com/avatars/8667ba71-b85a-4004-af54-457a9734eed7&quot;); -fx-background-radius: 20px; -fx-background-size: cover; -fx-shape: &quot;M0 13 C0 5 5 0 13 0 L86 0 C94 0 99 5 99 13 L99 86 C99 94 94 99 86 99 L13 99 C5 99 0 94 0 86Z&quot;;;" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+            <Button fx:id="settingsBTN" alignment="CENTER" contentDisplay="CENTER" layoutX="738.0" layoutY="14.0" mnemonicParsing="false" onAction="#settingsBTN" onMouseEntered="#settingsAnim" onMouseExited="#settingsExit" prefHeight="45.0" prefWidth="41.0" style="-fx-background-color: #2d3436; -fx-background-radius: 0 30 30 0; -fx-font-family: 'Simplifica';" styleClass="btn-round" stylesheets="@buttons.css" textAlignment="CENTER" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fx:id="settingsICON" glyphName="SETTINGS" size="20" textAlignment="CENTER">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#03a3ff" />
+                              <Stop color="#00ffba" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </MaterialDesignIconView>
+               </graphic>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <WebView fx:id="wbv" prefHeight="396.0" stylesheets="@Main.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="74.0" />
+            <AnchorPane fx:id="download" prefHeight="53.0" prefWidth="800.0" style="-fx-background-color: linear-gradient(to right top, #0f0f0f, #131313, #171717, #1a1a1a, #1e1d1d);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label fx:id="downinfo" alignment="CENTER" contentDisplay="CENTER" layoutY="14.0" prefHeight="17.0" prefWidth="800.0" text="..." textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXProgressBar fx:id="down" prefHeight="8.0" prefWidth="800.0" progress="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <Text fx:id="nick" fill="WHITE" layoutX="67.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: 'Dosis Light'; -fx-font-size: 32px;;" text="Steve" wrappingWidth="126.640625" />
+            <Text fx:id="rankTxt" fill="WHITE" layoutX="67.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 22px; -fx-font-family: 'Dosis Light';" text="#Gracz" />
+         </children>
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </AnchorPane>
+      <VBox fx:id="settingsPane" alignment="CENTER" prefHeight="450.0" prefWidth="800.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="123.0" prefWidth="800.0" VBox.vgrow="NEVER">
+               <children>
+                  <Pane prefHeight="172.0" prefWidth="359.0" style="-fx-background-color: linear-gradient(to right top, #0f0f0f, #131313, #171717, #1a1a1a, #1e1d1d); -fx-border-style: solid; -fx-border-color: white; -fx-background-radius: 30; -fx-border-radius: 30;" HBox.hgrow="NEVER">
+                     <children>
+                        <Button fx:id="closeSettings" alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="60.0" mnemonicParsing="false" onAction="#closeSettings" onMouseEntered="#closeSettingsAnim" onMouseExited="#closeSettingsExit" prefHeight="45.0" prefWidth="193.0" style="-fx-background-color: white; -fx-background-radius: 30 0 0 30; -fx-font-family: 'Dosis Light';" styleClass="btn-round" stylesheets="@buttons.css" textAlignment="RIGHT">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#757ceb" />
+                                    <Stop color="#00cff7" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                           <graphic>
+                              <Label fx:id="closeSettingsText" text="Zamknij">
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#757ceb" />
+                                          <Stop color="#00cff7" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Label>
+                           </graphic>
+                        </Button>
+                        <Label layoutX="31.0" layoutY="18.0" prefHeight="17.0" prefWidth="34.0" text="Ram:" textFill="WHITE" />
+                        <JFXSlider fx:id="ramp" layoutX="31.0" layoutY="35.0" max="10.0" prefHeight="14.0" prefWidth="298.0" />
+                        <Label fx:id="rami" layoutX="65.0" layoutY="18.0" prefHeight="17.0" prefWidth="78.0" text="\%" textFill="WHITE" />
+                        <Button fx:id="login" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" layoutX="224.0" layoutY="60.0" mnemonicParsing="false" onAction="#login" onMouseEntered="#loginAnim" onMouseExited="#loginExit" prefHeight="45.0" prefWidth="104.0" style="-fx-background-color: rgba(244, 67, 54, 1); -fx-background-radius: 0 30 30 0; -fx-font-family: 'Dosis Light';" styleClass="btn-round" stylesheets="@buttons.css" textAlignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#b6eb75" />
+                                    <Stop color="#00cff7" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                           <graphic>
+                              <Label fx:id="loginText" text="Wyloguj">
+                                 <textFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#b6eb75" />
+                                          <Stop color="#00cff7" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </textFill>
+                              </Label>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <effect>
+                        <DropShadow height="20.0" radius="9.5" spread="0.03" width="20.0" />
+                     </effect>
+                  </Pane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox fx:id="modpackPane" alignment="CENTER" prefHeight="470.0" prefWidth="800.0" visible="false">
+         <children>
+            <HBox alignment="CENTER" prefHeight="272.0" prefWidth="800.0" VBox.vgrow="NEVER">
+               <children>
+                  <Pane prefHeight="172.0" prefWidth="359.0" style="-fx-background-color: linear-gradient(to right top, #0f0f0f, #131313, #171717, #1a1a1a, #1e1d1d); -fx-border-style: solid; -fx-border-color: white; -fx-background-radius: 30; -fx-border-radius: 30;" HBox.hgrow="NEVER">
+                     <effect>
+                        <DropShadow height="20.0" radius="9.5" spread="0.03" width="20.0" />
+                     </effect>
+                     <children>
+                        <Label alignment="CENTER" layoutX="43.0" layoutY="26.0" prefHeight="37.0" prefWidth="273.0" text="Wybierz paczkę" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true">
+                           <font>
+                              <Font name="Corbel Light" size="32.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="skyb" layoutX="22.0" layoutY="85.0" mnemonicParsing="false" onAction="#skyb" prefHeight="150.0" prefWidth="150.0" style="-fx-background-image: url('https://i.imgur.com/spaHrUR.png'); -fx-background-color: rgb(35, 35, 35); -fx-background-radius: 0px; -fx-shape: &quot;M0 13 C0 5 5 0 13 0 L86 0 C94 0 99 5 99 13 L99 86 C99 94 94 99 86 99 L13 99 C5 99 0 94 0 86Z&quot;;">
+                           <opaqueInsets>
+                              <Insets top="1.0" />
+                           </opaqueInsets>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="survi" disable="true" layoutX="188.0" layoutY="85.0" mnemonicParsing="false" onAction="#survi" prefHeight="150.0" prefWidth="150.0" style="-fx-background-image: url('https://i.imgur.com/OUeAErE.png'); -fx-background-color: rgb(35, 35, 35); -fx-background-radius: 0px; -fx-background-size: 150px; -fx-shape: &quot;M0 13 C0 5 5 0 13 0 L86 0 C94 0 99 5 99 13 L99 86 C99 94 94 99 86 99 L13 99 C5 99 0 94 0 86Z&quot;;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <opaqueInsets>
+                              <Insets top="1.0" />
+                           </opaqueInsets>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
